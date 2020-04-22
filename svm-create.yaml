@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    aggrname: aggr1
+    login: &login
+      hostname: "{{ hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+      https: true
+      validate_certs: false
+  name: Onboard SVM
+  tasks:
+  - name: Create/delete SVM
+    na_ontap_svm:
+      state: "{{ status }}"
+      name: "{{ vserver }}"
+      root_volume: "{{ vserver}}_root"
+      root_volume_aggregate: "{{ aggrname }}"
+      root_volume_security_style: unix
+      <<: *login
