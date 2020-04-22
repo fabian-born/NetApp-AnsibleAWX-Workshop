@@ -9,11 +9,11 @@
       password: "{{ netapp_password }}"
       https: true
       validate_certs: false
+    license_codes: 
     state: present
   tasks:
   - name: Add licenses
     na_ontap_license:
       state: "{{ state }}"
-      serial_number: "4082368511"
-      license_codes: CODE1,CODE2
+      license_codes: "{{ license_codes }}"
       <<: *login
