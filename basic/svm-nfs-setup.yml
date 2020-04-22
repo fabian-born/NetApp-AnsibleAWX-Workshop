@@ -33,3 +33,4 @@
       ro_rule: any
       rw_rule: none
       super_user_security: none
+      <<: *login
