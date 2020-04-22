@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    aggrname: aggr1
+    login: &login
+      hostname: "{{ hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+      https: true
+      validate_certs: false
+    state: present
+  name: Onboard SVM
+  tasks:
+  - name: Add licenses
+    na_ontap_license:
+      state: present
+      hostname: "{{ netapp_hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+      license_codes: CODE1,CODE2
