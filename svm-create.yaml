@@ -9,11 +9,12 @@
       password: "{{ netapp_password }}"
       https: true
       validate_certs: false
+      state: present
   name: Onboard SVM
   tasks:
   - name: Create/delete SVM
     na_ontap_svm:
-      state: present
+      state: "{{ state }}"
       name: "{{ vserver }}"
       root_volume: "{{ vserver}}_root"
       root_volume_aggregate: "{{ aggrname }}"
