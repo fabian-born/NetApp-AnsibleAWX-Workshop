@@ -14,7 +14,7 @@
   tasks:
   - name: Create interface
     na_ontap_interface:
-      state: "{{ status }}"
+      state: "{{ state }}"
       interface_name: "{{ vserver }}_mgmt_data_1"
       home_port: e0c
       home_node: cni-ntap-cluster-01
