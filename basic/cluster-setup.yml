@@ -10,10 +10,9 @@
       https: true
       validate_certs: false
     state: present
-  name: Onboard SVM
   tasks:
   - name: Add licenses
     na_ontap_license:
-      state: present
+      state: "{{ state }}"
       license_codes: CODE1,CODE2
       <<: *login
