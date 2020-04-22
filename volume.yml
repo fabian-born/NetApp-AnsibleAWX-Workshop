@@ -22,7 +22,7 @@
       size_unit: gb
       policy: "{{ export_policy }}"
       junction_path: "{{ '' if not export_policy else '/volname' }}"
-      space_guarantee: "none"
+      space_guarantee: "volume"
       vserver: "{{ vserver }}"
       hostname: "{{ hostname }}"
       username: "{{ netapp_username }}"
