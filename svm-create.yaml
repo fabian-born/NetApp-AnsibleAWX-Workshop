@@ -10,7 +10,6 @@
       https: true
       validate_certs: false
     state: present
-  name: Onboard SVM
   tasks:
   - name: "Create or delete SVM"
     na_ontap_svm:
