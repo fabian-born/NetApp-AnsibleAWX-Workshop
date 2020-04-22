@@ -13,7 +13,7 @@
   tasks:
   - name: Create/delete SVM
     na_ontap_svm:
-      state: "{{ status }}"
+      state: present
       name: "{{ vserver }}"
       root_volume: "{{ vserver}}_root"
       root_volume_aggregate: "{{ aggrname }}"
