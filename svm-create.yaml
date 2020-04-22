@@ -12,7 +12,7 @@
       state: present
   name: Onboard SVM
   tasks:
-  - name: Create/delete SVM
+  - name: Create or delete SVM
     na_ontap_svm:
       state: "{{ state }}"
       name: "{{ vserver }}"
