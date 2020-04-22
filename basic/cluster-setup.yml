@@ -14,5 +14,6 @@
   - name: Add licenses
     na_ontap_license:
       state: "{{ state }}"
+      serial_number: "4082368511"
       license_codes: CODE1,CODE2
       <<: *login
