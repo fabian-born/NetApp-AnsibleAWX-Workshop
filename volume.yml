@@ -2,7 +2,7 @@
   name: ONTAP
   gather_facts: false
   vars:
-    hostname: "{{ cluster }}"
+    hostname:
     volname: ansibleVolume
     vserver: ansible_vserver
     aggrname:
