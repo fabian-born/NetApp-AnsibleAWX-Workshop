@@ -15,7 +15,7 @@
   - name: Add licenses
     na_ontap_license:
       state: present
-      hostname: "{{ netapp_hostname }}"
+      hostname: "{{ hostname }}"
       username: "{{ netapp_username }}"
       password: "{{ netapp_password }}"
       license_codes: CODE1,CODE2
