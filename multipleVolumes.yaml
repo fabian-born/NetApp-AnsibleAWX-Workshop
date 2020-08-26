@@ -32,4 +32,4 @@
       validate_certs: false
       efficiency_policy: "{{ e_policy }}"
       qos_policy_group: "{{ qos_policy }}"
-    with_sequence: start=0 end={{countvol|int}} format={{volname}}%02x
+    with_sequence: start=1 end={{countvol|int}} format={{volname}}%02x
