@@ -19,7 +19,7 @@
         validate_certs: false
         datastore_name: 'ds_{{ volname }}'
         datastore_type: 'nfs'
-        nfs_server: '{{ nfs_server }}'
+        nfs_server: '{{ dataipaddress }}'
         nfs_path: '/{{ volname }}'
         nfs_ro: no
         esxi_hostname: '{{ esxi_host }}'
