@@ -9,6 +9,7 @@
     volname: ansibleVolume
     vserver: ansible_vserver
     nfs_server: "IPorName"
+    state: present
   tasks:
   - name: Mount NFS datastores to ESXi
     vmware_host_datastore:
@@ -22,5 +23,5 @@
         nfs_path: '/{{ volname }}'
         nfs_ro: no
         esxi_hostname: '{{ esxi_host }}'
-        state: present
+        state: '{{ state }}'
     delegate_to: localhost
