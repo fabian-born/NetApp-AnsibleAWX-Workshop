@@ -21,7 +21,7 @@
       aggregate_name: "{{ aggrname }}"
       size: "{{ size }}"
       size_unit: gb
-      policy: "{{ export_policy }}"
+      policy: "default"
       junction_path: "{{ '' if not export_policy else '/volname' }}"
       space_guarantee: "volume"
       vserver: "{{ vserver }}"
