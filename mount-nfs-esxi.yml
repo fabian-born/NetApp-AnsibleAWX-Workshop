@@ -1,0 +1,25 @@
+- hosts: localhost
+  name: vmware
+  gather_facts: false
+  vars:
+    vcenter_hostname: "1.1.1.1"
+    vcenter_username: "default"
+    vcenter_password: "default"
+    esxi_host: "IPorName"
+    volname: ansibleVolume
+    vserver: ansible_vserver
+    nfs_server: "IPorName"
+  tasks:
+  - name: Mount NFS datastores to ESXi
+    vmware_host_datastore:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        datastore_name: 'ds_{{ volname }}'
+        datastore_type: 'nfs'
+        nfs_server: 'nfs_server'
+        nfs_path: '/{{ volname }}'
+        nfs_ro: no
+        esxi_hostname: 'esxi_host'
+        state: present
+    delegate_to: localhost
