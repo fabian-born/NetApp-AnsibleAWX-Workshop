@@ -15,11 +15,12 @@
         hostname: '{{ vcenter_hostname }}'
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
+        validate_certs: false
         datastore_name: 'ds_{{ volname }}'
         datastore_type: 'nfs'
-        nfs_server: 'nfs_server'
+        nfs_server: '{{ nfs_server }}'
         nfs_path: '/{{ volname }}'
         nfs_ro: no
-        esxi_hostname: 'esxi_host'
+        esxi_hostname: '{{ esxi_host }}'
         state: present
     delegate_to: localhost
