@@ -17,11 +17,12 @@
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
         validate_certs: false
-        datastore_name: 'ds_{{ volname }}'
+        datastore_name: 'ds_{{ item }}'
         datastore_type: 'nfs'
         nfs_server: '{{ dataipaddress }}'
-        nfs_path: '/{{ volname }}'
+        nfs_path: '/{{ item }}'
         nfs_ro: no
         esxi_hostname: '{{ esxi_host }}'
         state: '{{ state }}'
     delegate_to: localhost
+    with_sequence: start=1 end={{countvol|int}} format={{volname}}%02x
