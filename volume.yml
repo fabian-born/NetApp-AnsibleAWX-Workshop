@@ -5,7 +5,7 @@
     hostname: "1.1.1.1"
     volname: ansibleVolume
     vserver: ansible_vserver
-    aggrname:
+    aggr_name:
     size: 10
     aggr: aggr1
     e_policy: 
@@ -17,7 +17,7 @@
     netapp.ontap.na_ontap_volume:
       state: "{{ state }}"
       name: "{{ volname }}"
-      aggregate_name: "{{ aggrname }}"
+      aggregate_name: "{{ aggr_name }}"
       size: "{{ size }}"
       size_unit: gb
       policy: "{{ export_policy }}"
