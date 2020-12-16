@@ -2,7 +2,7 @@
 - hosts: localhost
   gather_facts: false
   vars:
-    aggrname: aggr1
+    aggr_name: aggr1
     login: &login
       hostname: "{{ hostname }}"
       username: "{{ netapp_username }}"
