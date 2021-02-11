@@ -7,4 +7,4 @@
 
 # Reference
 [NetApp Ansible Module with Tower](https://netapp.io/2020/01/07/getting-started-using-tower-with-awx/)
-[NetApp Ansible Module](https://docs.ansible.com/ansible/latest/modules/list_of_storage_modules.html#netapp)
+[NetApp Ansible Module](hhttps://docs.ansible.com/ansible/latest/collections/netapp/ontap/index.html)
