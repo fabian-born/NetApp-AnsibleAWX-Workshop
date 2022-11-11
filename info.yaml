@@ -5,8 +5,8 @@
     aggrname: aggr1
     login: &login
       hostname: "{{ hostname }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
       https: true
       validate_certs: false
   gather_facts: false
