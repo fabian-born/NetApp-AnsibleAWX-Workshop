@@ -18,3 +18,4 @@
       state: info
       gather_subset:
         - cluster_identity_info
+     <<: *login
