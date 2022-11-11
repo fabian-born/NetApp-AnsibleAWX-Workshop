@@ -1,16 +1,18 @@
-collections:
-  - netapp.ontap
-- name: Install/Remove default tools
-  become: yes
-  hosts: all
-  tasks: 
-  - name: Install a list of packages
-    setup:
-      gather_subset:
-        - all
-        - '!any'
-        - facter
-    register: serverinfos
+- hosts: localhost
+  collections:
+    - netapp.ontap
+  task:
+  - name: Install/Remove default tools
+    become: yes
+    hosts: all
+    tasks: 
+    - name: Install a list of packages
+      setup:
+        gather_subset:
+          - all
+          - '!any'
+          - facter
+      register: serverinfos
 
-  - debug:
-      var: serverinfos
+    - debug:
+        var: serverinfos
