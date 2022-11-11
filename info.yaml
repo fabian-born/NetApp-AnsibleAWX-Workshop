@@ -5,17 +5,8 @@
   collections:
     - netapp.ontap
   tasks:
-  - name: Install/Remove default tools
-    become: yes
-    hosts: all
-    tasks: 
-    - name: Install a list of packages
-      setup:
-        gather_subset:
-          - all
-          - '!any'
-          - facter
-      register: serverinfos
-
-    - debug:
-        var: serverinfos
+  - name: Get Ontap Info
+    na_ontap_info:
+      state: info
+      gather_subset:
+        - cluster_identity_info
