@@ -1,6 +1,14 @@
 
 ---
 - hosts: localhost
+  vars:
+    aggrname: aggr1
+    login: &login
+      hostname: "{{ hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      https: true
+      validate_certs: false
   gather_facts: false
   collections:
     - netapp.ontap
