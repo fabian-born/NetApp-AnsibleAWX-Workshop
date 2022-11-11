@@ -1,7 +1,10 @@
+
+---
 - hosts: localhost
+  gather_facts: false
   collections:
     - netapp.ontap
-  task:
+  tasks:
   - name: Install/Remove default tools
     become: yes
     hosts: all
