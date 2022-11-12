@@ -17,5 +17,5 @@
       name: "{{ vserver }}"
       root_volume: "{{ vserver}}_root"
       root_volume_aggregate: "{{ aggr_name }}"
-      root_volume_security_style: unix
+      # root_volume_security_style: unix
       <<: *login
