@@ -25,7 +25,7 @@
       firewall_policy: mgmt
       is_auto_revert: true
       address: "{{dataipaddress }}"
-      netmask: 255.255.255.0
+      netmask: 255.255.254.0
       vserver: "{{ vserver }}"
       <<: *login
   - name: create route
