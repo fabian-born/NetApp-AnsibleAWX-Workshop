@@ -28,3 +28,11 @@
       netmask: 255.255.255.0
       vserver: "{{ vserver }}"
       <<: *login
+  - name: create route
+    netapp.ontap.na_ontap_net_routes:
+      state: present
+      vserver: "{{ vserver }}"
+      destination: 0.0.0.0/0
+      gateway: "{{ gw }}"
+      metric: 30
+      <<: *login
