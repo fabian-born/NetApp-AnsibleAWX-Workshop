@@ -17,7 +17,7 @@
       state: "{{ state }}"
       interface_name: "{{ vserver }}_mgmt_data_1"
       home_port: e0c
-      home_node: fabianb-wdf-k8sstore-01
+      home_node: fabianb-wdf-k8sstore02-01
       role: data
       protocols: nfs
       admin_status: up
