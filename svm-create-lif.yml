@@ -18,7 +18,7 @@
       interface_name: "{{ vserver }}_mgmt_data_1"
       home_port: e0g
       home_node: fabianb-wdf-k8sstore02-01
-      role: data
+      service_policy: default-data-files
       protocols: nfs
       admin_status: up
       failover_policy: local-only
